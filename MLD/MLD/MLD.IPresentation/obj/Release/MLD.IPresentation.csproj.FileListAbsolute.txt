@@ -1,0 +1,13 @@
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.IPresentation.dll
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.IPresentation.pdb
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.Entity.dll
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.ViewModel.dll
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.Entity.pdb
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.ViewModel.pdb
+D:\document\gym\MLD\MLD\MLD.IPresentation\obj\Release\MLD.IPresentation.csprojResolveAssemblyReference.cache
+D:\document\gym\MLD\MLD\MLD.IPresentation\obj\Release\MLD.IPresentation.dll
+D:\document\gym\MLD\MLD\MLD.IPresentation\obj\Release\MLD.IPresentation.pdb
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.Library.dll
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\Newtonsoft.Json.dll
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\MLD.Library.pdb
+D:\document\gym\MLD\MLD\MLD.IPresentation\bin\Release\Newtonsoft.Json.xml

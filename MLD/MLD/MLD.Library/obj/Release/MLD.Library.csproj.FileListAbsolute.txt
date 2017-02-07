@@ -1,0 +1,7 @@
+D:\document\gym\MLD\MLD\MLD.Library\bin\Release\MLD.Library.dll
+D:\document\gym\MLD\MLD\MLD.Library\bin\Release\MLD.Library.pdb
+D:\document\gym\MLD\MLD\MLD.Library\bin\Release\Newtonsoft.Json.dll
+D:\document\gym\MLD\MLD\MLD.Library\bin\Release\Newtonsoft.Json.xml
+D:\document\gym\MLD\MLD\MLD.Library\obj\Release\MLD.Library.dll
+D:\document\gym\MLD\MLD\MLD.Library\obj\Release\MLD.Library.pdb
+D:\document\gym\MLD\MLD\MLD.Library\obj\Release\MLD.Library.csprojResolveAssemblyReference.cache

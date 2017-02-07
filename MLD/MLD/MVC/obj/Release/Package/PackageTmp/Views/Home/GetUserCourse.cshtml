@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+@model MLD.ViewModel.UserCourse
+<div class="userInfo">
+    <img src="/Material/Img/hand.jpg" />
+    <div class="infoMsg">
+        <h2><i class="fa fa-user"></i> @Model.Name &nbsp;&nbsp;<a href="javascript:outLogin()"><i class="fa fa-power-off"></i></a></h2>
+        <p><i class="fa fa-mobile"></i> @Model.UserTel</p>
+    </div>
+</div>
+
+<div class="listTitle">
+    <i class="fa fa-reorder"></i> 我的预约
+</div>
+<ul class="dataList">
+    @foreach (var item in Model.Courses)
+    {
+        <li onclick="location.href = '@Url.Action("Info", "Home", new { id = item.CourseId })'">
+            <img src="@item.Img" alt="@item.CourseName" />
+            <div class="dataInfo">
+                <h3>
+                    @item.CourseName
+                    @if (item.ReservationState == MLD.ViewModel.State.ReservationState.WaitClasses)
+                    {
+                        <span class="label label-danger" data-course="@item.CourseId" data-mobilenum="@Model.UserTel">取消预约</span>
+                    }
+                </h3>
+                <p>
+                    开课时间 <i class="fa fa-clock-o"></i> @item.CourseDate.ToString("yyyy/MM/dd")
+                </p>
+                <p>
+                    课程时段 <i class="fa fa-clock-o"></i> @item.StartTime.ToString(@"hh\:mm")&nbsp;-&nbsp;@item.EndTime.ToString(@"hh\:mm")
+                </p>
+                <p>
+                    地点 <i class="fa fa-map-marker"></i> @item.CourseAddr
+                </p>
+                <p>
+                    状态 <i class="fa fa-star-half-o"></i> @item.ReservationState.GetEnumName()
+                </p>
+            </div>
+        </li>
+    }
+</ul>
+@*<button class="moreBtn"><i class="fa fa-angle-double-right"></i> 获取更多</button>*@
+<script type="text/javascript">
+    $(".label").click(function (event) {
+        if (!confirm("确定要取消预约课程？"))
+            return;
+        $.post("@Url.Action("CancelCourse", "Home")", {
+            courseId: $(this).data("course"),
+            mobileNum: $(this).data("mobilenum")
+        }, function (state) {
+            switch (state) {
+                case "0":
+                    alert("预约不存在");
+                    break;
+                case "1":
+                    alert("取消预约失败");
+                    break;
+                case "2":
+                    $.get("@Url.Action("GetUserCourse", "Home")", {
+                        mobileNum: "@Model.UserTel"
+                    }, function (html) {
+                        $("#loginInfo").html(html);
+                    });
+                    break;
+                case "3":
+                    alert("请在开课前的4小时内取消预约");
+                    break;
+            }
+        });
+        event.stopPropagation();
+    });
+</script>

@@ -1,0 +1,3 @@
+ftp:xiaolan123! pwd:xiaolan123!
+
+db:MLDGYM pwd:mldgym

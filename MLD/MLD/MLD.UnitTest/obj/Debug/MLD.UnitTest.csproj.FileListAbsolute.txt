@@ -1,0 +1,11 @@
+D:\document\gym\MLD\MLD\MLD.UnitTest\bin\Debug\MLD.UnitTest.dll
+D:\document\gym\MLD\MLD\MLD.UnitTest\bin\Debug\MLD.UnitTest.pdb
+D:\document\gym\MLD\MLD\bin\MLD.UnitTest.dll.config
+D:\document\gym\MLD\MLD\bin\MLD.UnitTest.dll
+D:\document\gym\MLD\MLD\bin\MLD.UnitTest.pdb
+D:\document\gym\MLD\MLD\MVC\bin\MLD.UnitTest.dll.config
+D:\document\gym\MLD\MLD\MVC\bin\MLD.UnitTest.dll
+D:\document\gym\MLD\MLD\MVC\bin\MLD.UnitTest.pdb
+D:\document\gym\MLD\MLD\MLD.UnitTest\obj\Debug\MLD.UnitTest.csprojResolveAssemblyReference.cache
+D:\document\gym\MLD\MLD\MLD.UnitTest\obj\Debug\MLD.UnitTest.dll
+D:\document\gym\MLD\MLD\MLD.UnitTest\obj\Debug\MLD.UnitTest.pdb

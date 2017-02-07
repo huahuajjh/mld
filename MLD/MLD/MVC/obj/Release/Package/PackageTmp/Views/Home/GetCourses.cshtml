@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+@model IList<MLD.ViewModel.CourseList>
+@foreach (var item in Model.OrderBy(d => d.StartTime))
+{
+    <li>
+        <time class="cbp_tmtime">
+            <span>@item.StartTime.ToString(@"hh\:mm")</span>
+        </time>
+        <time class="cbp_emtime">
+            <span>@item.EndTime.ToString(@"hh\:mm")</span>
+        </time>
+        <div class="cbp_tmicon"></div>
+        <div class="cbp_etmicon"></div>
+        <a href="@Url.Action("Info", "Home", new { id = item.CourseId })" class="cbp_tmlabel">
+            <img src="@item.Img" alt="@item.Name" />
+            <h2>@item.Name <span><i class="fa fa-users"></i> @item.PersonNum</span></h2>
+            <p>
+                <i class="fa fa-map-marker"></i> @item.Addr
+            </p>
+        </a>
+    </li>
+}

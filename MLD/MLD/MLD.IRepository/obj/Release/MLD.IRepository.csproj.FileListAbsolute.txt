@@ -1,0 +1,10 @@
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\MLD.IRepository.dll.config
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\MLD.IRepository.dll
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\MLD.IRepository.pdb
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\EntityFramework.dll
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\EntityFramework.SqlServer.dll
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\EntityFramework.xml
+D:\document\gym\MLD\MLD\MLD.IRepository\bin\Release\EntityFramework.SqlServer.xml
+D:\document\gym\MLD\MLD\MLD.IRepository\obj\Release\MLD.IRepository.dll
+D:\document\gym\MLD\MLD\MLD.IRepository\obj\Release\MLD.IRepository.pdb
+D:\document\gym\MLD\MLD\MLD.IRepository\obj\Release\MLD.IRepository.csprojResolveAssemblyReference.cache

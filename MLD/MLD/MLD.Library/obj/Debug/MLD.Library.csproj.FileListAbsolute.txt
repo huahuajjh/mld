@@ -1,0 +1,8 @@
+D:\document\gym\MLD\MLD\MLD.Library\bin\Debug\MLD.Library.dll
+D:\document\gym\MLD\MLD\MLD.Library\bin\Debug\MLD.Library.pdb
+D:\document\gym\MLD\MLD\bin\MLD.Library.dll
+D:\document\gym\MLD\MLD\bin\MLD.Library.pdb
+D:\document\gym\MLD\MLD\MVC\bin\MLD.Library.dll
+D:\document\gym\MLD\MLD\MVC\bin\MLD.Library.pdb
+D:\document\gym\MLD\MLD\MLD.Library\obj\Debug\MLD.Library.dll
+D:\document\gym\MLD\MLD\MLD.Library\obj\Debug\MLD.Library.pdb

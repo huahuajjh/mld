@@ -1,0 +1,113 @@
+﻿@{
+    Layout = null;
+}
+@model MLD.ViewModel.CourseInfo
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link href="/Material/CSS/css.css" rel="stylesheet" />
+    <link href="/Material/Swiper/swiper.min.css" rel="stylesheet" />
+    <link href="/Material/CSS/info.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="inputContext">
+        <div class="contextWin">
+            <div class="winTitle">填写预约信息</div>
+            <div class="winBody">
+                <input type="hidden" name="grpCourseId" value="@Model.Id" />
+
+                <div class="textFa">
+                    <i class="fa fa-mobile"></i>
+                    <input type="text" maxlength="11" class="form-control" placeholder="联系人手机号码" name="mobile" />
+                </div>
+
+                <div class="yyPerson">
+                    <p>人数：</p>
+                    <ul>
+                        <li class="selected">
+                            <label><i class="fa fa-check-square-o"></i> 1人<input checked type="radio" name="personNum" value="1" /></label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="winFoot">
+                <a class="winBtn" id="closeWinBtn">关闭</a>
+                <a class="winBtn" id="subWinBtn">提交</a>
+            </div>
+        </div>
+    </form>
+    <div class="topHead">
+        <a href="javascript:history.back()" class="btn close">关闭</a>
+        <span>课程详细</span>
+        <a class="btn yy" id="yuYueBtn">预约</a>
+    </div>
+
+    <div class="info">
+        <img src="@Model.Img" />
+        <div class="infoMsg">
+            <h2>@Model.Name</h2>
+            <p>上课时间：@Model.CourseDate.ToString("yyyy/MM/dd")</p>
+            <p>
+                课程时段 <i class="fa fa-clock-o"></i> @Model.StartTime.ToString(@"hh\:mm")&nbsp;-&nbsp;@Model.EndTime.ToString(@"hh\:mm")
+            </p>
+            <p>上课地点：@Model.Addr</p>
+            <p>课程状态：@Model.CourseState.GetEnumName()</p>
+            <p>
+                还可预约 <span style="color: red;">@Model.PersonNum</span> 人
+            </p>
+        </div>
+    </div>
+    <div class="contextTitle">
+        <i class="fa fa-reorder"></i> 课程详细
+    </div>
+    <div class="context">
+        @(new HtmlString(Model.Introduce))
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/Material/Swiper/swiper.min.js"></script>
+    <script src="/Material/JS/size.js"></script>
+    <script type="text/javascript">
+        $("#yuYueBtn").click(function () {
+            $(".inputContext")[0].reset();
+            $("input[name=personNum]").change();
+            $(".inputContext").css("display", "block");
+        });
+        $("#closeWinBtn").click(function () {
+            $(".inputContext").css("display", "none");
+        });
+        $("input[name=personNum]").change(function () {
+            $("input[name=personNum]").map(function () {
+                var li = $(this).closest("li");
+                if ($(this).prop("checked")) {
+                    li.addClass("selected");
+                    $("i", li).removeClass("fa-square-o").addClass("fa-check-square-o");
+                } else {
+                    li.removeClass("selected");
+                    $("i", li).removeClass("fa-check-square-o").addClass("fa-square-o");
+                }
+            });
+        });
+        $("#subWinBtn").click(function () {
+            var mobile = $("input[name=mobile]").val();
+
+            var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
+            if (!reg.test(mobile)) {
+                alert("请输入正确的手机号码");
+                return;
+            }
+
+            var val = $(".inputContext").serialize();
+            $.post("@Url.Action("YuYue", "Home")", val, function (state) {
+                alert(state);
+            });
+        });
+    </script>
+</body>
+</html>

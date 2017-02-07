@@ -1,0 +1,172 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>预约健身</title>
+    <link href="/Material/CSS/css.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link href="/Material/Swiper/swiper.min.css" rel="stylesheet" />
+    <link href="/Material/CSS/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="m-calendar">
+        <div class="currentdays">
+            <div class="swiper-container" id="topSwiper">
+                <div class="swiper-wrapper">
+                    @for (int i = 0; i < 7; i++)
+                    {
+                        var date = DateTime.Now.AddDays(i);
+                        <div class="swiper-slide" data-date="@date.ToString("yyyy-MM-dd")">
+                            @date.ToString("MM.dd")
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="calendarIcon">
+                <a><i class="fa fa-user"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container" id="contextSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+
+                <div class="swiper-container verticalContext">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                            <ul class="cbp_tmtimeline" id="timeLine"></ul>
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+
+                <div class="swiper-container verticalContext">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" id="loginInfo">
+
+                            <div class="login">
+                                <img src="/Material/Img/hand.jpg" />
+                                <div class="textFa">
+                                    <i class="fa fa-mobile"></i>
+                                    <input type="text" maxlength="11" class="form-control" id="mobileNum" />
+                                </div>
+                                <button type="button" class="btn btn-default" onclick="login(this)"><i class="fa fa-bolt"></i> 我的预约</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/Material/Swiper/swiper.min.js"></script>
+    <script src="/Material/JS/size.js"></script>
+    <script type="text/javascript">
+        var context = new Swiper('#contextSwiper', {
+            onlyExternal: true
+        });
+        $(".verticalContext").map(function () {
+            $(this).swiper({
+                scrollbar: $('.swiper-scrollbar', this)[0],
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                onTouchStart: function (swiper, even) {
+                    swiper.onResize();
+                }
+            });
+        });
+
+        var mySwiper = new Swiper("#topSwiper", {
+            slidesPerView: 4,
+            slideToClickedSlide: true,
+            centeredSlides: true,
+            onInit: function (swiper) {
+                var slide = swiper.slides[0];
+                var date = $(slide).data("date");
+                getCourseList(date);
+            },
+            onClick: function (swiper) {
+                var index = swiper.activeIndex;
+                var slide = swiper.slides[index];
+                $(slide).addClass("swiper-slide-active");
+                $(".calendarIcon a").removeClass("select");
+                context.slideTo(0, 1000, false);
+            },
+            onTransitionEnd: function (swiper) {
+                var index = swiper.activeIndex;
+                var slide = swiper.slides[index];
+                $(slide).addClass("swiper-slide-active");
+                $(".calendarIcon a").removeClass("select");
+                context.slideTo(0, 1000, false);
+
+                var date = $(slide).data("date");
+                getCourseList(date);
+            },
+            onTransitionStart: function (swiper) {
+                $(".calendarIcon a").removeClass("select");
+            }
+
+        });
+
+        $(".calendarIcon a").click(function () {
+            var index = mySwiper.activeIndex;
+            var slide = mySwiper.slides[index];
+            $(slide).removeClass("swiper-slide-active");
+            $(this).addClass("select");
+            context.slideTo(1, 1000, false);
+        });
+
+        //获取预约课程
+        function getCourseList(date) {
+            $.get("@Url.Action("GetCourses", "Home")", {
+                date: date
+            }, function (html) {
+                $("#timeLine").html(html);
+            });
+        }
+
+        //登录
+        function login(btn) {
+
+            var tel = $("#mobileNum").val();
+
+            var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
+            if (!reg.test(tel)) {
+                alert("请输入正确的手机号码");
+                return;
+            }
+
+            $.get("@Url.Action("GetUserCourse", "Home")", {
+                mobileNum: tel
+            }, function (html) {
+                if (html == "false") {
+                    alert("用户不存在");
+                    return;
+                }
+                $("#loginInfo").html(html);
+            });
+        }
+
+        //退出登录
+        function outLogin() {
+            $.get("@Url.Action("OutLogin", "Home")", function (html) {
+                $("#loginInfo").html(html);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52717945-1E1D-4174-80DB-9C504A6E81FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MLD.Domain</RootNamespace>
+    <AssemblyName>MLD.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MVC\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackGrpCourseManagement\BackGrpCursManageImpl.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="Course\GroupCourseImpl.cs" />
+    <Compile Include="IRegisterService\IBaseServices.cs" />
+    <Compile Include="IRegisterService\IServices.cs" />
+    <Compile Include="IRegisterService\IServicesFactory.cs" />
+    <Compile Include="IRegisterService\IServicesRegister.cs" />
+    <Compile Include="Login\LoginImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterService\BaseServices.cs" />
+    <Compile Include="RegisterService\ServiceRegisterFactory.cs" />
+    <Compile Include="RegisterService\Services.cs" />
+    <Compile Include="RegisterService\ServicesFactory.cs" />
+    <Compile Include="RegisterService\ServicesRegister.cs" />
+    <Compile Include="Usermanagement\UserManagementImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MLD.Entity\MLD.Entity.csproj">
+      <Project>{8E2F7B93-B582-4A2B-9AFE-2E76E97126D7}</Project>
+      <Name>MLD.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLD.IPresentation\MLD.IPresentation.csproj">
+      <Project>{57CB83A7-3B94-44B4-ABE8-F75A33889EE7}</Project>
+      <Name>MLD.IPresentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLD.IRepository\MLD.IRepository.csproj">
+      <Project>{D8E5D4E3-DAAE-4721-9A3A-DE8E2A35D99B}</Project>
+      <Name>MLD.IRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLD.Library\MLD.Library.csproj">
+      <Project>{1FFA2CD0-466B-43E7-A113-88B339842B16}</Project>
+      <Name>MLD.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLD.ViewModel\MLD.ViewModel.csproj">
+      <Project>{F74878F1-1912-44FD-A7FC-B17151D2F3A0}</Project>
+      <Name>MLD.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

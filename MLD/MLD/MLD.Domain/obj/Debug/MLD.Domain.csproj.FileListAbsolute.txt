@@ -1,0 +1,9 @@
+D:\document\gym\MLD\MLD\MLD.Domain\bin\Debug\MLD.Domain.dll
+D:\document\gym\MLD\MLD\MLD.Domain\bin\Debug\MLD.Domain.pdb
+D:\document\gym\MLD\MLD\bin\MLD.Domain.dll
+D:\document\gym\MLD\MLD\bin\MLD.Domain.pdb
+D:\document\gym\MLD\MLD\MVC\bin\MLD.Domain.dll
+D:\document\gym\MLD\MLD\MVC\bin\MLD.Domain.pdb
+D:\document\gym\MLD\MLD\MLD.Domain\obj\Debug\MLD.Domain.csprojResolveAssemblyReference.cache
+D:\document\gym\MLD\MLD\MLD.Domain\obj\Debug\MLD.Domain.dll
+D:\document\gym\MLD\MLD\MLD.Domain\obj\Debug\MLD.Domain.pdb

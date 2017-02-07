@@ -1,0 +1,9 @@
+D:\document\gym\MLD\MLD\MLD.Entity\bin\Debug\MLD.Entity.dll
+D:\document\gym\MLD\MLD\MLD.Entity\bin\Debug\MLD.Entity.pdb
+D:\document\gym\MLD\MLD\bin\MLD.Entity.dll
+D:\document\gym\MLD\MLD\bin\MLD.Entity.pdb
+D:\document\gym\MLD\MLD\MVC\bin\MLD.Entity.dll
+D:\document\gym\MLD\MLD\MVC\bin\MLD.Entity.pdb
+D:\document\gym\MLD\MLD\MLD.Entity\obj\Debug\MLD.Entity.csprojResolveAssemblyReference.cache
+D:\document\gym\MLD\MLD\MLD.Entity\obj\Debug\MLD.Entity.dll
+D:\document\gym\MLD\MLD\MLD.Entity\obj\Debug\MLD.Entity.pdb

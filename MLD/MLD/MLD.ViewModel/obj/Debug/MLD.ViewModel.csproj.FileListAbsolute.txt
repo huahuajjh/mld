@@ -1,0 +1,4 @@
+D:\document\gym\MLD\MLD\MLD.ViewModel\bin\Debug\MLD.ViewModel.dll
+D:\document\gym\MLD\MLD\MLD.ViewModel\bin\Debug\MLD.ViewModel.pdb
+D:\document\gym\MLD\MLD\MLD.ViewModel\obj\Debug\MLD.ViewModel.dll
+D:\document\gym\MLD\MLD\MLD.ViewModel\obj\Debug\MLD.ViewModel.pdb

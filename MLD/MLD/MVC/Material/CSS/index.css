@@ -1,0 +1,429 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.m-calendar {
+    background-color: #00bfbf;
+    height: 2.5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.currentdays {
+    position: relative;
+    padding-top: .5rem;
+    padding-right: 2.45rem;
+}
+
+#topSwiper .swiper-slide {
+    line-height: 1.5rem;
+    border-radius: .75rem;
+    text-align: center;
+    font-size: .7rem;
+    text-align: center;
+    font-size: .7rem;
+    color: #fff;
+}
+
+#topSwiper .swiper-slide-active {
+    background-color: #1a7d7d;
+}
+
+.calendarIcon {
+    text-align: center;
+    float: right;
+    height: 1.7rem;
+    width: 2.40rem;
+    border-left: 1px solid #0994c3;
+    position: absolute;
+    right: 0;
+    top: .4rem;
+    box-shadow: 1px 0 0 #5bd3d6 inset;
+}
+
+    .calendarIcon .fa {
+        color: white;
+        font-size: 1.45rem;
+    }
+
+    .calendarIcon a {
+        display: block;
+        margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+        padding: 0.2rem;
+        border-radius: 0.3rem;
+        position: relative;
+        top: -0.25rem;
+    }
+
+        .calendarIcon a.select {
+            background-color: #1a7d7d;
+        }
+
+#topSwiper:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 100%;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background: -ms-linear-gradient(left, rgba(0,191,191,1), rgba(0,191,191,0)); /* IE 10 */
+    background: -moz-linear-gradient(left,rgba(0,191,191,1),rgba(0,191,191,0)); /*火狐*/
+    background: -webkit-gradient(linear, 100% 0%, 0% 0%,from(rgba(0,191,191,1)), to(rgba(0,191,191,0))); /*谷歌*/
+    background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(rgba(0,191,191,1)), to(rgba(0,191,191,0))); /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(left, rgba(0,191,191,1), rgba(0,191,191,0)); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(left, rgba(0,191,191,1), rgba(0,191,191,0)); /*Opera 11.10+*/
+}
+
+#topSwiper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 100%;
+    background-color: #000;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    background: -ms-linear-gradient(left, rgba(0,191,191,0), rgba(0,191,191,1)); /* IE 10 */
+    background: -moz-linear-gradient(left,rgba(0,191,191,0),rgba(0,191,191,1)); /*火狐*/
+    background: -webkit-gradient(linear, 100% 0%, 0% 0%,from(rgba(0,191,191,0)), to(rgba(0,191,191,1))); /*谷歌*/
+    background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(rgba(0,191,191,0)), to(rgba(0,191,191,1))); /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(left, rgba(0,191,191,0), rgba(0,191,191,1)); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(left, rgba(0,191,191,0), rgba(0,191,191,1)); /*Opera 11.10+*/
+}
+
+#contextSwiper {
+    width: 100%;
+    height: 100%;
+    padding-top: 2.5rem;
+    box-sizing: border-box;
+}
+
+.verticalContext {
+    width: 100%;
+    height: 100%;
+}
+
+    .verticalContext .swiper-slide {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+.cbp_tmtimeline {
+    padding: 0;
+    list-style: none;
+    position: relative;
+    top: 1rem;
+}
+
+    .cbp_tmtimeline > li {
+        position: relative;
+    }
+
+    .cbp_tmtimeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: .5rem;
+        background: #e0ffff;
+        left: 3.74rem;
+        border-radius: 0 0 999rem 999rem;
+    }
+
+    .cbp_tmtimeline > li .cbp_tmtime {
+        display: block;
+        width: 3rem;
+        position: absolute;
+        text-align: right;
+        font-size: 1rem;
+        color: #00bfbf;
+    }
+
+    .cbp_tmtimeline > li .cbp_emtime {
+        display: block;
+        width: 3.5rem;
+        position: absolute;
+        text-align: right;
+        font-size: .8rem;
+        color: #00bfbf;
+        top: 7rem;
+    }
+
+    .cbp_tmtimeline > li .cbp_tmicon {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        background: #fff0f5;
+        border-radius: 50%;
+        box-shadow: 0 0 0 .3rem #e0ffff;
+        text-align: center;
+        left: 3.51rem;
+        top: 0;
+    }
+
+    .cbp_tmtimeline > li .cbp_etmicon {
+        width: .3rem;
+        height: .3rem;
+        position: absolute;
+        background: red;
+        border-radius: 50%;
+        text-align: center;
+        left: 3.83rem;
+        top: 7.25rem;
+    }
+
+    .cbp_tmtimeline > li .cbp_tmlabel {
+        display: block;
+        margin: 0 .5rem 1rem 5.3rem;
+        background: #ececec;
+        color: #555;
+        padding: .5rem;
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.4;
+        position: relative;
+        border-radius: .3rem;
+        top: -.4rem;
+        text-align: center;
+    }
+
+        .cbp_tmtimeline > li .cbp_tmlabel:after {
+            right: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-right-color: #ececec;
+            border-width: 10px;
+            top: .5rem;
+        }
+
+        .cbp_tmtimeline > li .cbp_tmlabel img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            box-shadow: 0 0 .2rem .2rem #ccc;
+            margin: .7rem;
+        }
+
+        .cbp_tmtimeline > li .cbp_tmlabel h2 {
+            font-size: .9rem;
+        }
+
+            .cbp_tmtimeline > li .cbp_tmlabel h2 span {
+                font-size: .4rem;
+                position: relative;
+                bottom: .2rem;
+            }
+
+        .cbp_tmtimeline > li .cbp_tmlabel p {
+            font-size: .6rem;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+.textFa {
+    position: relative;
+}
+
+    .textFa .fa {
+        position: absolute;
+        top: 0;
+        left: .3rem;
+        font-size: 1.5rem;
+    }
+
+    .textFa input[type=text] {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 1.5rem;
+        padding: .3rem .6rem .3rem 1.2rem;
+        font-size: .6rem;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: .2rem;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+
+.login {
+    text-align: center;
+    padding-top: 3rem;
+    padding: 3rem 2rem 0 2rem;
+}
+
+    .login img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow: 0 0 .2rem .2rem #ccc;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .login input[type=text] {
+        margin-top: 1rem;
+    }
+
+    .login button {
+        width: 100%;
+        margin-top: .5rem;
+        color: #333;
+        background-color: #fff;
+        display: inline-block;
+        padding: .3rem .6rem;
+        margin-bottom: 0;
+        font-size: .7rem;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: .2rem;
+    }
+
+.userInfo {
+    background-color: #ececec;
+    padding: 1rem;
+    border-bottom: 1px solid #cecece;
+    position: relative;
+}
+
+    .userInfo img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow: 0 0 .2rem .2rem #ccc;
+    }
+
+    .userInfo .infoMsg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 6rem;
+        padding-top: 2rem;
+    }
+
+        .userInfo .infoMsg h2 {
+            font-size: 1rem;
+        }
+
+            .userInfo .infoMsg h2 a {
+                font-size: 1rem;
+                color: red;
+            }
+
+        .userInfo .infoMsg p {
+            margin-top: .2rem;
+            font-size: .8rem;
+            color: #555;
+        }
+
+.listTitle {
+    margin-top: .8rem;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: .4rem;
+    padding-left: .5rem;
+    font-size: .8rem;
+}
+
+ul.dataList li {
+    border-bottom: 1px solid #cecece;
+    padding: 1rem;
+    position: relative;
+}
+
+    ul.dataList li img {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 .2rem .2rem #ccc;
+    }
+
+    ul.dataList li .dataInfo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 5.5rem;
+        padding-top: .5rem;
+    }
+
+        ul.dataList li .dataInfo h3 {
+            font-size: .9rem;
+            margin-bottom: .25rem;
+            color: #333;
+        }
+
+        ul.dataList li .dataInfo p {
+            font-size: .6rem;
+            margin-bottom: .2rem;
+            color: #808080;
+        }
+
+.moreBtn {
+    text-align: center;
+    padding: .6rem;
+    background-color: transparent;
+    border: 0px;
+    font-size: .5rem;
+    color: #666;
+    width: 100%;
+}
+
+.label {
+    display: inline;
+    padding: .2rem .6rem;
+    font-size: .5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    float: right;
+    margin-right: .4rem;
+}
+
+.label-default {
+    background-color: #777;
+}
+
+.label:hover {
+    color: wheat;
+}
+
+.label-danger {
+    background-color: #d9534f;
+}

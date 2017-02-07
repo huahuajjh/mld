@@ -1,0 +1,236 @@
+﻿        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            width: 100%;
+        }
+
+        .topHead {
+            background-color: #00bfbf;
+            height: 2.5rem;
+            width: 100%;
+            position: relative;
+            text-align: center;
+        }
+
+            .topHead > span {
+                line-height: 2.7rem;
+                color: white;
+                font-size: .8rem;
+            }
+
+            .topHead .close {
+                position: absolute;
+                top: .4rem;
+                left: .5rem;
+            }
+
+            .topHead .yy {
+                position: absolute;
+                top: .4rem;
+                right: .5rem;
+            }
+
+        .btn {
+            padding: .4rem;
+            background-color: #00bfbf;
+            color: #fff;
+            font-size: .7rem;
+            border: 1px solid #098;
+            box-shadow: 0px 0px 1px 1px #5bd3d6 inset;
+        }
+
+            .btn:hover {
+                color: wheat;
+            }
+
+        .info {
+            background-color: #ececec;
+            padding: 1rem;
+            border-bottom: 1px solid #cecece;
+            position: relative;
+        }
+
+            .info img {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                box-shadow: 0 0 .2rem .2rem #ccc;
+            }
+
+            .info .infoMsg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 6rem;
+                padding-top: .5rem;
+            }
+
+                .info .infoMsg h2 {
+                    font-size: 1rem;
+                }
+
+                .info .infoMsg p {
+                    margin-top: .2rem;
+                    font-size: .6rem;
+                    color: #555;
+                }
+
+        .contextTitle {
+            margin-top: .8rem;
+            border-bottom: 1px solid #cecece;
+            padding-bottom: .4rem;
+            padding-left: .5rem;
+            font-size: .8rem;
+        }
+
+        .context {
+            padding: .5rem .7rem;
+        }
+
+        .inputContext {
+            display: none;
+            background-color: rgba(0,0,0,0.5);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+            .inputContext .contextWin {
+                border-radius: .2rem;
+                background-color: white;
+                margin: 2rem 1.5rem 0 1.5rem;
+            }
+
+                .inputContext .contextWin .winTitle {
+                    padding: .6rem 0;
+                    margin-bottom: .4rem;
+                    font-size: .8rem;
+                    text-align: center;
+                    border-bottom: 1px solid #ccc;
+                }
+
+                .inputContext .contextWin .winBody {
+                    padding: .2rem 1rem;
+                }
+
+                    .inputContext .contextWin .winBody > * {
+                        margin-bottom: .6rem;
+                    }
+
+                        .inputContext .contextWin .winBody > *:last-child {
+                            margin-bottom: 0;
+                        }
+
+                .inputContext .contextWin .winFoot {
+                    border-top: 1px solid #ccc;
+                    margin-top: .4rem;
+                    border-radius: 0 0 .2rem .2rem;
+                    overflow: hidden;
+                }
+
+                    .inputContext .contextWin .winFoot:after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+
+                    .inputContext .contextWin .winFoot .winBtn {
+                        display: block;
+                        text-align: center;
+                        width: 50%;
+                        float: left;
+                        box-sizing: border-box;
+                        padding: .8rem;
+                        border: 0 solid transparent;
+                        border-right: 1px solid #ccc;
+                        background-color: transparent;
+                        font-size: .6rem;
+                    }
+
+                        .inputContext .contextWin .winFoot .winBtn:nth-child(2) {
+                            border-right: 0px solid #ccc;
+                            border-left: 1px solid #ccc;
+                        }
+
+        .textFa {
+            position: relative;
+        }
+
+            .textFa .fa {
+                position: absolute;
+                top: 0;
+                left: .3rem;
+                font-size: 1.5rem;
+            }
+
+            .textFa input[type=text] {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                height: 1.5rem;
+                padding: .3rem .6rem .3rem 1.2rem;
+                font-size: .6rem;
+                line-height: 1.42857143;
+                color: #555;
+                background-color: #fff;
+                background-image: none;
+                border: 1px solid #ccc;
+                border-radius: .2rem;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+
+        .yyPerson:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .yyPerson ul, p {
+            float: left;
+        }
+
+        .yyPerson p {
+            font-size: .7rem;
+            line-height: 1.2rem;
+        }
+
+        .yyPerson ul li {
+            padding: .2rem;
+            float: left;
+            margin-left: .4rem;
+            border: 1px solid #ccc;
+        }
+
+            .yyPerson ul li label {
+                font-size: .6rem;
+            }
+
+                .yyPerson ul li label .fa {
+                    font-size: .6rem;
+                    color: #666;
+                }
+
+                .yyPerson ul li label input {
+                    display: none;
+                }
+
+        .selected {
+            border: 1px solid red !important;
+        }
+
+            .selected .fa {
+                color: red !important;
+            }

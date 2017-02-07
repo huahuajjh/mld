@@ -1,0 +1,248 @@
+﻿@{
+    Layout = "../Shared/ContentTitle.cshtml";
+}
+<link href="~/Areas/Admin/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
+<link href="~/Areas/Admin/assets/plugins/parsley/src/parsley.css" rel="stylesheet" />
+<div class="panel panel-inverse">
+    <div class="panel-heading">
+
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-expand" title="最大化"><i class="fa fa-expand"></i></a>
+            <a href="javascript:dataTab.fnDraw();" class="btn btn-xs btn-icon btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="刷新"><i class="fa fa-repeat"></i></a>
+            <a href="javascript:$('#add-modal').modal('show');" class="btn btn-xs btn-icon btn-circle btn-warning" data-toggle="tooltip" data-placement="bottom" title="新增课程"><i class="fa fa-plus"></i></a>
+        </div>
+
+
+        <h4 class="panel-title">团体课程管理</h4>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table id="data-table" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+
+<form class="modal fade form-horizontal form-bordered" id="add-modal" enctype='multipart/form-data' data-parsley-validate="true" onsubmit="return false;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">新增课程</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程名称 * :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <input class="form-control" type="text" placeholder="课程名称" name="Name"
+                               data-parsley-required="true"
+                               data-parsley-required-message="课程名称不可为空" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">开课日期 * :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <input class="form-control" type="text" id="kaiKeDate" placeholder="开课日期" name="CourseDate"
+                               data-parsley-required="true"
+                               data-parsley-required-message="开课日期不可为空" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程开始时间 :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <div class="input-group bootstrap-timepicker">
+                            <input id="startTime" type="text" class="form-control" placeholder="课程开始时间" name="StartTime"
+                                   data-parsley-required="true"
+                                   data-parsley-required-message="课程开始时间不可为空" />
+                            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程结束时间 :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <div class="input-group bootstrap-timepicker">
+                            <input id="endTime" type="text" class="form-control" placeholder="课程结束时间" name="EndTime"
+                                   data-parsley-required="true"
+                                   data-parsley-required-message="课程结束时间不可为空" />
+                            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程人数 :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <input type="number" class="form-control" placeholder="课程人数" name="MaxPersons"
+                               data-parsley-required="true"
+                               data-parsley-required-message="课程人数不可为空" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程图片 :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <input type="file" class="form-control" placeholder="课程图片" name="img"
+                               data-parsley-required="true"
+                               data-parsley-required-message="课程图片不可为空" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程开课地点 :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <input type="text" class="form-control" placeholder="课程开课地点" name="Addr"
+                               data-parsley-required="true"
+                               data-parsley-required-message="课程开课地点不可为空" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4 ui-sortable">课程描述 :</label>
+                    <div class="col-md-6 col-sm-6 ui-sortable">
+                        <textarea class="form-control" rows="10" placeholder="课程描述" name="Descrp"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-sm btn-success">提交</button>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="modal fade form-horizontal form-bordered" id="edit-modal" enctype='multipart/form-data'>
+    <div class="modal-dialog">
+        <div class="modal-content" id="edit-context">
+        </div>
+    </div>
+</form>
+@section script{
+    <script src="~/Areas/Admin/assets/plugins/DataTables-1.10.2/js/jquery.dataTables.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/DataTables-1.10.2/js/data-table.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/mustache/mustache.min.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/jquery.form/jquery.form.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/parsley/dist/parsley.js"></script>
+    <script type="text/javascript">
+        var dataTab = $('#data-table').dataTable({
+            "bServerSide": true,
+            "sAjaxSource": "@Url.Action("Index", "AddGroupCourseBook", new {area = "Admin"})",
+            "sServerMethod": "POST",
+            "bDeferRender": true,
+            "bProcessing": true,
+            "iDisplayLength": 10,
+            "fnServerParams": function(aoData) {
+                //aoData.push({ "name": "parentId", "value": parentId });
+            },
+            "aoColumns": [
+                {
+                    "mData": 'Id',
+                    "sTitle": "课程编号"
+                }, {
+                    "mData": 'Name',
+                    "sTitle": "课程名称"
+                }, {
+                    "mData": 'CourseDate',
+                    "sTitle": "开课时间",
+                    "mRender": function (data, type, row) {
+                        return format(eval('new ' + (data.replace(/\//g, ''))), "yyyy-MM-dd");
+                    }
+                }, {
+                    "sClass": "text-center",
+                    "mData": 'Id',
+                    "sTitle": "操作",
+                    "mRender": function(data, type, row) {
+                        var template = $('#template').html();
+                        Mustache.parse(template);
+                        var rendered = Mustache.render(template, { Id: data });
+                        return rendered;
+                    }
+                }
+            ]
+        });
+        $('#data-table').on('draw.dt', function() {
+            $('[data-toggle="tooltip"]', "#data-table").tooltip();
+        });
+
+        function deleteData(id) {
+            if (confirm("确定要删除？"))
+                $.post("@Url.Action("Delete", "AddGroupCourseBook", new {area = "Admin"})", { id: id }, function() {
+                    dataTab.fnDraw();
+                });
+        }
+
+        $('#add-modal').on('hidden.bs.modal', function(e) {
+            $('#add-modal')[0].reset();
+        });
+
+        $('#add-modal').submit(function() {
+            if (!$('#add-modal').parsley().validate())
+                return false;
+            $("#add-modal").ajaxSubmit({
+                type: "post",
+                url: "@Url.Action("Add", "AddGroupCourseBook", new {area = "Admin"})",
+                success: function(data1) {
+                    $('#add-modal').modal('hide');
+                    dataTab.fnDraw();
+                    alert("添加成功");
+                },
+                error: function(msg) {
+                    alert("文件上传失败");
+                }
+            });
+            return false;
+        });
+
+        $('#edit-modal').submit(function() {
+            if (!$('#edit-modal').parsley().validate())
+                return false;
+            $("#edit-modal").ajaxSubmit({
+                type: "post",
+                url: "@Url.Action("Edit", "AddGroupCourseBook", new {area = "Admin"})",
+                success: function(data1) {
+                    $('#edit-modal').modal('hide');
+                    dataTab.fnDraw();
+                    alert("修改成功");
+                },
+                error: function(msg) {
+                    alert("文件上传失败");
+                }
+            });
+            return false;
+        });
+
+        function edit(id) {
+            $.get("@Url.Action("Edit", "AddGroupCourseBook", new {area = "Admin"})", {
+                id: id
+            }, function(html) {
+                $("#edit-context").html(html);
+                $('#edit-modal').modal('show');
+            });
+        }
+
+        function format(date, fmt) { //author: meizz
+            var o = {
+                "M+": date.getMonth() + 1,                 //月份
+                "d+": date.getDate(),                    //日
+                "H+": date.getHours(),                   //小时
+                "m+": date.getMinutes(),                 //分
+                "s+": date.getSeconds(),                 //秒
+                "q+": Math.floor((date.getMonth() + 3) / 3), //季度
+                "S": date.getMilliseconds()             //毫秒
+            };
+            if (/(y+)/.test(fmt))
+                fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt))
+                    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+
+        $("#kaiKeDate").datepicker({ todayHighlight: true, autoclose: true });
+        $("#startTime,#endTime").timepicker({ showMeridian: false });
+    </script>
+    <script type="text/x-mustache" id="template">
+        <a href="javascript:edit({{Id}});" class="btn btn-success btn-icon btn-circle btn-xs" data-toggle="tooltip" data-placement="bottom" title="编辑">
+            <i class="fa fa-pencil"></i>
+        </a>
+        &nbsp;&nbsp;
+        <a href="javascript:deleteData({{Id}});" class="btn btn-danger btn-icon btn-circle btn-xs" data-toggle="tooltip" data-placement="bottom" title="删除">
+            <i class="fa fa-times"></i>
+        </a>
+    </script>
+}

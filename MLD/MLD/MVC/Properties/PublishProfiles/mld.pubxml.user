@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Admin/assets/css/animate.min.css">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/css/invoice-print.min.css">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/css/style-responsive.min.css">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/css/style.min.css">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/css/theme/default.css">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/coming-soon.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-1.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-10.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-2.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-3.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-4.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-5.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-6.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-7.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-8.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/gallery/gallery-9.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/login-bg/bg-1.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/login-bg/bg-2.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/login-bg/bg-3.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/login-bg/bg-4.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/login-bg/bg-5.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/login-bg/bg-6.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/logo.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-1.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-2.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-3.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-4.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-5.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-preview-iphone.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-preview-sm.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/product/product-preview.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/transparent/black-0.2.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/transparent/black-0.4.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/transparent/black-0.6.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/transparent/black-0.8.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/transparent/white-0.98.png">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-1.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-10.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-11.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-12.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-13.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-14.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-2.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-3.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-4.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-5.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-6.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-7.jpg">
+      <publishTime>07/27/2015 11:21:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-8.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/img/user-9.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/apps.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/calendar.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/chart-flot.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/chart-morris.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/coming-soon.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/dashboard-v2.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/dashboard.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/email-compose.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/email-inbox-v2.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-editable.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-multiple-upload.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-plugins.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-slider-switcher.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-wizards-validation.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-wizards.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/form-wysiwyg.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/gallery-v2.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/gallery.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/inbox.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/login-v2.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/map-google.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/map-vector.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/page-with-two-sidebar.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/timeline.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/ui-modal-notification.demo.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/js/ui-modal-notification.demo.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/css/bootstrap.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/fonts/glyphicons-halflings-regular.eot_">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-3.2.0/js/bootstrap.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/saturation.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-combobox/css/bootstrap-combobox.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-combobox/js/bootstrap-combobox.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-datepicker/css/datepicker.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-datepicker/css/datepicker3.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js">
+      <publishTime>08/04/2015 18:15:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-select/bootstrap-select.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-select/bootstrap-select.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wizard/css/bwizard.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wizard/js/bwizard.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wysihtml5/.DS_Store">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wysihtml5/lib/.DS_Store">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/css/bootstrap-editable.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/img/clear.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/img/loading.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/inputs-ext/address/address.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/inputs-ext/address/address.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/inputs-ext/typeaheadjs/lib/typeahead.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/inputs-ext/typeaheadjs/lib/typeahead.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/inputs-ext/typeaheadjs/typeaheadjs.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/inputs-ext/wysihtml5/wysihtml5.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/bootstrap3-editable/js/bootstrap-editable.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/ckeditor/ckeditor.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/css/data-table.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/img/sort_asc.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/img/sort_asc_disabled.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/img/sort_both.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/img/sort_desc.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/img/sort_desc_disabled.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/js/data-table.js">
+      <publishTime>07/28/2015 17:34:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/DataTables-1.10.2/js/jquery.dataTables.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.categories.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.crosshair.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.pie.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.resize.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.stack.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/flot/jquery.flot.time.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/.DS_Store">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/css/font-awesome.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/fonts/.DS_Store">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/fonts/fontawesome-webfont.eot">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/fonts/fontawesome-webfont.svg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/font-awesome-4.2.0/fonts/fontawesome-webfont.woff">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/fullcalendar/fullcalendar/fullcalendar.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/gritter/css/jquery.gritter.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/gritter/images/gritter-light.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/gritter/images/gritter.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/gritter/images/ie-spacer.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/gritter/js/jquery.gritter.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/ionRangeSlider/css/ion.rangeSlider.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/ionRangeSlider/css/ion.rangeSlider.skinnice.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/ionRangeSlider/img/sprite-skin-nice.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/isotope/isotope.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/isotope/jquery.isotope.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-1.8.2/jquery-1.8.2.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-cookie/jquery.cookie.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/css/jquery.fileupload.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/img/loading.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/img/progressbar.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload-audio.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload-image.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload-process.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload-ui.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload-validate.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload-video.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.fileupload.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/jquery.iframe-transport.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/vendor/load-image.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-file-upload/js/vendor/tmpl.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-knob/js/jquery.knob.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-tag-it/css/jquery.tagit.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-tag-it/js/tag-it.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/animated-overlay.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/themes/base/minified/jquery-ui.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery.countdown/jquery.countdown.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery.countdown/jquery.countdown.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery.countdown/jquery.plugin.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/jquery.form/jquery.form.js">
+      <publishTime>07/28/2015 17:34:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/json2/json2.js">
+      <publishTime>07/29/2015 13:57:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/lightbox/css/lightbox.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/lightbox/img/close.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/lightbox/img/loading.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/lightbox/img/next.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/lightbox/img/prev.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/lightbox/js/lightbox-2.6.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/masked-input/masked-input.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/mockjax/jquery.mockjax.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/moment/moment.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/morris/morris.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/morris/morris.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/morris/raphael.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/mustache/mustache.min.js">
+      <publishTime>07/28/2015 17:34:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/parsley/dist/parsley.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/parsley/src/parsley.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/password-indicator/css/password-indicator.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/password-indicator/img/progressImg1.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/password-indicator/js/password-indicator.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/powerange/powerange.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/powerange/powerange.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/select2/select2-spinner.gif">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/select2/select2.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/select2/select2.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/select2/select2.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/select2/select2x2.png">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.eot">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.eot_">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.svg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.ttf">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/simple-line-icons/simple-line-icons.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/slimscroll/jquery.slimscroll.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/sparkline/jquery.sparkline.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-1.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-10.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-11.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-12.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-13.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-14.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-15.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-16.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-17.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-18.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-19.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-2.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-20.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-21.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-22.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-23.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-24.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-3.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-4.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-5.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-6.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-7.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-8.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/img/superbox/superbox-thumb-9.jpg">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/superbox/js/superbox.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/switchery/switchery.min.css">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/assets/plugins/switchery/switchery.min.js">
+      <publishTime>07/27/2015 11:21:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/AddGroupCourseBook/Edit.cshtml">
+      <publishTime>07/30/2015 11:09:42</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/AddGroupCourseBook/Index.cshtml">
+      <publishTime>07/29/2015 13:57:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GroupCourseBook/Index.cshtml">
+      <publishTime>07/29/2015 13:57:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GroupCourseBook/Show.cshtml">
+      <publishTime>07/29/2015 10:08:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Index/Index.cshtml">
+      <publishTime>07/27/2015 15:59:35</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Login/Login.cshtml">
+      <publishTime>08/03/2015 18:21:23</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/ContentTitle.cshtml">
+      <publishTime>07/28/2015 17:34:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/ErrorPage.cshtml">
+      <publishTime>07/27/2015 11:54:43</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/ShareIndex.cshtml">
+      <publishTime>08/03/2015 18:22:33</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/Edit.cshtml">
+      <publishTime>07/30/2015 10:31:52</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/User/Index.cshtml">
+      <publishTime>07/30/2015 10:29:52</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Web.config">
+      <publishTime>07/29/2015 10:08:28</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>07/27/2015 10:43:33</publishTime>
+    </File>
+    <File Include="bin/MLD.Domain.dll">
+      <publishTime>08/05/2015 18:56:32</publishTime>
+    </File>
+    <File Include="bin/MLD.Entity.dll">
+      <publishTime>08/05/2015 18:56:31</publishTime>
+    </File>
+    <File Include="bin/MLD.IPresentation.dll">
+      <publishTime>08/05/2015 18:56:31</publishTime>
+    </File>
+    <File Include="bin/MLD.IRepository.dll">
+      <publishTime>08/05/2015 18:56:31</publishTime>
+    </File>
+    <File Include="bin/MLD.Library.dll">
+      <publishTime>08/05/2015 18:56:30</publishTime>
+    </File>
+    <File Include="bin/MLD.ViewModel.dll">
+      <publishTime>08/03/2015 18:08:48</publishTime>
+    </File>
+    <File Include="bin/MVC.dll">
+      <publishTime>08/05/2015 18:56:33</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/05/2015 18:44:36</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/27/2015 10:43:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/27/2015 10:43:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>07/27/2015 10:43:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/05/2015 18:44:35</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>07/26/2015 23:06:36</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>07/26/2015 23:06:47</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>07/26/2015 23:06:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>07/26/2015 23:07:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>07/26/2015 23:06:19</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>07/26/2015 23:06:43</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>07/26/2015 23:06:47</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>07/26/2015 23:06:47</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>07/26/2015 23:06:47</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/27/2015 10:45:08</publishTime>
+    </File>
+    <File Include="Material/CSS/css.css">
+      <publishTime>07/27/2015 17:37:59</publishTime>
+    </File>
+    <File Include="Material/CSS/index.css">
+      <publishTime>07/29/2015 10:08:28</publishTime>
+    </File>
+    <File Include="Material/CSS/info.css">
+      <publishTime>07/29/2015 10:08:28</publishTime>
+    </File>
+    <File Include="Material/Img/hand.jpg">
+      <publishTime>07/27/2015 17:37:59</publishTime>
+    </File>
+    <File Include="Material/JS/size.js">
+      <publishTime>07/27/2015 17:37:59</publishTime>
+    </File>
+    <File Include="Material/Swiper/swiper.min.css">
+      <publishTime>07/27/2015 17:37:59</publishTime>
+    </File>
+    <File Include="Material/Swiper/swiper.min.js">
+      <publishTime>07/27/2015 17:37:59</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/30/2015 10:01:33</publishTime>
+    </File>
+    <File Include="Views/Home/GetCourses.cshtml">
+      <publishTime>07/30/2015 12:48:54</publishTime>
+    </File>
+    <File Include="Views/Home/GetUserCourse.cshtml">
+      <publishTime>07/28/2015 17:53:49</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/03/2015 18:32:58</publishTime>
+    </File>
+    <File Include="Views/Home/Info.cshtml">
+      <publishTime>08/04/2015 14:12:06</publishTime>
+    </File>
+    <File Include="Views/Home/OutLogin.cshtml">
+      <publishTime>07/30/2015 11:19:04</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/27/2015 17:41:20</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/05/2015 18:56:34</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

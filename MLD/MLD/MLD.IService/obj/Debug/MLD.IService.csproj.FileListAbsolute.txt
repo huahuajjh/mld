@@ -1,0 +1,8 @@
+D:\document\gym\MLD\MLD\MLD.IService\bin\Debug\MLD.IService.dll
+D:\document\gym\MLD\MLD\MLD.IService\bin\Debug\MLD.IService.pdb
+D:\document\gym\MLD\MLD\bin\MLD.IService.dll
+D:\document\gym\MLD\MLD\bin\MLD.IService.pdb
+D:\document\gym\MLD\MLD\MVC\bin\MLD.IService.dll
+D:\document\gym\MLD\MLD\MVC\bin\MLD.IService.pdb
+D:\document\gym\MLD\MLD\MLD.IService\obj\Debug\MLD.IService.dll
+D:\document\gym\MLD\MLD\MLD.IService\obj\Debug\MLD.IService.pdb

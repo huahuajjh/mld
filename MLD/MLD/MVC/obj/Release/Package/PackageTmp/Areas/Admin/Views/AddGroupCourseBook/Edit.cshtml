@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+@model MLD.Entity.TbGroupCourse
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">新增课程</h4>
+</div>
+<input type="hidden" name="Id" value="@Model.Id"/>
+<input type="hidden" name="Del" value="@Model.Del.ToString()"/>
+<input type="hidden" name="BookHowManyPerosonNum" value="@Model.BookHowManyPerosonNum"/>
+<input type="hidden" name="CourseState" value="@Model.CourseState"/>
+<input type="hidden" name="MaxPersonsOnce" value="@Model.MaxPersonsOnce"/>
+<div class="modal-body">
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程名称 * :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <input class="form-control" type="text" placeholder="课程名称" name="Name" value="@Model.Name"
+                   data-parsley-required="true"
+                   data-parsley-required-message="课程名称不可为空" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">开课日期 * :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <input class="form-control" type="text" id="editKaiKeDate" placeholder="开课日期" name="CourseDate" value="@Model.CourseDate.ToString("yyyy/MM/dd")"
+                   data-parsley-required="true"
+                   data-parsley-required-message="开课日期不可为空" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程开始时间 :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <div class="input-group bootstrap-timepicker">
+                <input id="editStartTime" type="text" class="form-control" placeholder="课程开始时间" name="StartTime" value="@Model.StartTime.ToString(@"hh\:mm")"
+                       data-parsley-required="true"
+                       data-parsley-required-message="课程开始时间不可为空" />
+                <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程结束时间 :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <div class="input-group bootstrap-timepicker">
+                <input id="editEndTime" type="text" class="form-control" placeholder="课程结束时间" name="EndTime" value="@Model.EndTime.ToString(@"hh\:mm")"
+                       data-parsley-required="true"
+                       data-parsley-required-message="课程结束时间不可为空" />
+                <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程人数 :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <input type="number" class="form-control" placeholder="课程人数" name="MaxPersons" value="@Model.MaxPersons"
+                   data-parsley-required="true"
+                   data-parsley-required-message="课程人数不可为空" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程图片 <a href="@Model.Img" target="_Blank">点击查看</a> :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <input type="file" class="form-control" placeholder="课程图片" name="img" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程开课地点 :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <input type="text" class="form-control" placeholder="课程开课地点" name="Addr" value="@Model.Addr"
+                   data-parsley-required="true"
+                   data-parsley-required-message="课程开课地点不可为空" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4 col-sm-4 ui-sortable">课程描述 :</label>
+        <div class="col-md-6 col-sm-6 ui-sortable">
+            <textarea class="form-control" rows="10" placeholder="课程描述" name="Descrp">@Model.Descrp</textarea>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-sm btn-success">提交</button>
+</div>
+<script type="text/javascript">
+    $("#editKaiKeDate").datepicker({ todayHighlight: true, autoclose: true });
+    $("#editStartTime,#editEndTime").timepicker({ showMeridian: false });
+</script>

@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "../Shared/ContentTitle.cshtml";
+}
+<div class="panel panel-inverse">
+    <div class="panel-heading">
+
+        <div class="panel-heading-btn">
+            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-expand" title="最大化"><i class="fa fa-expand"></i></a>
+            <a href="javascript:dataTab.fnDraw();" class="btn btn-xs btn-icon btn-circle btn-success" data-toggle="tooltip" data-placement="bottom" title="刷新"><i class="fa fa-repeat"></i></a>
+        </div>
+
+        <h4 class="panel-title">团体课程预约管理</h4>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table id="data-table" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="show-modal">
+    <div class="modal-dialog">
+        <div class="modal-content" id="show-context">
+        </div>
+    </div>
+</div>
+@section script{
+    <script src="~/Areas/Admin/assets/plugins/DataTables-1.10.2/js/jquery.dataTables.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/DataTables-1.10.2/js/data-table.js"></script>
+    <script src="~/Areas/Admin/assets/plugins/mustache/mustache.min.js"></script>
+<script src="~/Areas/Admin/assets/plugins/masked-input/masked-input.min.js"></script>
+    <script type="text/javascript">
+        var dataTab = $('#data-table').dataTable({
+            "bServerSide": true,
+            "sAjaxSource": "@Url.Action("Index", "GroupCourseBook", new { area = "Admin" })",
+            "sServerMethod": "POST",
+            "bDeferRender": true,
+            "bProcessing": true,
+            "iDisplayLength": 10,
+            "fnServerParams": function(aoData) {
+                //aoData.push({ "name": "parentId", "value": parentId });
+            }, "aoColumns": [
+                {
+                    "mData": 'Id',
+                    "sTitle": "课程编号"
+                }, {
+                    "mData": 'Name',
+                    "sTitle": "课程名称"
+                }, {
+                    "mData": 'CourseDate',
+                    "sTitle": "开课时间"
+                }, {
+                    "mData": 'Time',
+                    "sTitle": "课程时间段"
+                }, {
+                    "mData": 'PersonNum',
+                    "sTitle": "已预约人数"
+                }, {
+                    "sClass": "text-center",
+                    "mData": 'Id',
+                    "sTitle": "操作",
+                    "mRender": function(data, type, row) {
+                        var template = $('#template').html();
+                        Mustache.parse(template);
+                        var rendered = Mustache.render(template, { Id: data });
+                        return rendered;
+                    }
+                }
+            ]
+        });
+        $('#data-table').on('draw.dt', function() {
+            $('[data-toggle="tooltip"]', "#data-table").tooltip();
+        });
+
+        function show(id) {
+            $.get("@Url.Action("Show", "GroupCourseBook", new { area = "Admin" })", {
+                id: id
+            }, function(html) {
+                $("#show-context").html(html);
+                $('#show-modal').modal('show');
+            });
+        }
+    </script>
+    <script type="text/x-mustache" id="template">
+        <a href="javascript:show({{Id}});" class="btn btn-success btn-icon btn-circle btn-xs" data-toggle="tooltip" data-placement="bottom" title="查看">
+            <i class="fa fa-eye"></i>
+        </a>
+    </script>
+}
